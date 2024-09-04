@@ -8,6 +8,11 @@ jobs:
       node-version: [12, 14, 16]
       operating-system: [ubuntu-latest, windows-latest]
       #will tell github to run this workflow everytime based on operating system and version
+      include: 
+        - node-version: 18
+          operating-system: ubuntu-latest
+      exclude: 
+            
     runs-on: ${{ matrix.operating-system }}
     steps:
       - name: Get Code
